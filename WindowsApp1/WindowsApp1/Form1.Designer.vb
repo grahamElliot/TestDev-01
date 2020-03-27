@@ -238,7 +238,7 @@ Partial Class Form1
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(777, 387)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "Data from file"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'fileEncoding

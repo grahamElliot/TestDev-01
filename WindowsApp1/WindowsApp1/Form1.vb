@@ -193,7 +193,7 @@ Public Class Form1
         Do Until fileReader.EndOfStream
             stringReader = fileReader.ReadLine()
             pubParamComponents = Split(stringReader, pubFieldDelim, -1, vbTextCompare)
-
+            Me.DataGridView1.Rows.Add(pubParamComponents)
         Loop
 
         MsgBox("The last line of the file is " & stringReader)
