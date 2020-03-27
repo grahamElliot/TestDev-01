@@ -188,6 +188,8 @@ Public Class Form1
         '/ Skip over headings line.
         stringReader = fileReader.ReadLine()
 
+        Call Create_datagrid_headers()
+
         Do Until fileReader.EndOfStream
             stringReader = fileReader.ReadLine()
             pubParamComponents = Split(stringReader, pubFieldDelim, -1, vbTextCompare)
@@ -202,5 +204,11 @@ Public Class Form1
             MsgBox("The text and field seperators can't be the same character, please fix and re-run.")
             Application.Exit()
         End If
+    End Sub
+    Private Sub Create_datagrid_headers()
+        Dim counter1 As UInt16
+        For counter1 = 0 To pubLastFieldNumber
+            Me.DataGridView1.Columns.Add(counter1, pubFieldNames(counter1))
+        Next counter1
     End Sub
 End Class

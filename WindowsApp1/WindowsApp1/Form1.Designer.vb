@@ -44,8 +44,11 @@ Partial Class Form1
         Me.fileEncoding = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.checkData = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'selectFile
@@ -139,8 +142,10 @@ Partial Class Form1
         Me.runProgress.Location = New System.Drawing.Point(7, 435)
         Me.runProgress.Multiline = True
         Me.runProgress.Name = "runProgress"
-        Me.runProgress.Size = New System.Drawing.Size(781, 24)
+        Me.runProgress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.runProgress.Size = New System.Drawing.Size(781, 32)
         Me.runProgress.TabIndex = 13
+        Me.runProgress.Text = "1"
         '
         'Label2
         '
@@ -227,10 +232,11 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(777, 370)
+        Me.TabPage2.Size = New System.Drawing.Size(777, 387)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -261,11 +267,19 @@ Partial Class Form1
         Me.checkData.UseVisualStyleBackColor = True
         Me.checkData.Visible = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(732, 189)
+        Me.DataGridView1.TabIndex = 0
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 464)
+        Me.ClientSize = New System.Drawing.Size(800, 477)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.runProgress)
@@ -274,6 +288,8 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -301,4 +317,5 @@ Partial Class Form1
     Friend WithEvents Label8 As Label
     Friend WithEvents fileEncoding As TextBox
     Friend WithEvents checkData As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
